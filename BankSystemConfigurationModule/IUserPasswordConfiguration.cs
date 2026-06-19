@@ -9,7 +9,9 @@ namespace BankSystemConfigurationModule
     /// <summary>
     /// TODO: implement the required changes 
     /// </summary>
-    public interface IUserPasswordConfiguration
+    public interface IUserPasswordConfiguration : IConfiguration
     {
+        string UserName;
+        string Password;
     }
 }
