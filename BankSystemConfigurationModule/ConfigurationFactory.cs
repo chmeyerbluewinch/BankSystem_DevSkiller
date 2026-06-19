@@ -16,9 +16,9 @@ namespace BankSystemConfigurationModule
         }
     }
 
-    protected class Custom : BaseConfiguration, IUserPasswordConfiguration
+    internal class Custom : BaseConfiguration, IUserPasswordConfiguration
     {
-        Custom(int id): base(id)
+        public Custom(int id): base(id)
         {
         }
 

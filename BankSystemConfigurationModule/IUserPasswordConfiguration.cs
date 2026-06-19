@@ -11,7 +11,7 @@ namespace BankSystemConfigurationModule
     /// </summary>
     public interface IUserPasswordConfiguration : IConfiguration
     {
-        string UserName;
-        string Password;
+//        string UserName;
+//        string Password;
     }
 }
