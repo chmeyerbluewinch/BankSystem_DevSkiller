@@ -10,27 +10,30 @@ namespace BankSystemConfigurationModule
     {
         public static IConfiguration Create(int id)
         {
-            var custon = new Custom(id);
+            var custom = new Custom(id);
             //TODO: create instance of IConfiguration (instance of your class)
-            return null;
+            return custom;
         }
     }
 
-    internal class Custom : BaseConfiguration, IUserPasswordConfiguration
+    internal sealed class Custom : BaseConfiguration, IUserPasswordConfiguration
     {
         public Custom(int id): base(id)
         {
         }
 
+        public string UserName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public override string GetConfigurationInfo()
         {
-            if (String.IsNullOrEmpty(LastLog))  // or contains only white-spaces!
+            if (String.IsNullOrWhiteSpace(LastLog))
             {
-                return ("Configuration id: ; Log: no log");
+                return $"Configuration id: {Id}; Log: no log";
             }
             else
             {
-                return ("Configuration id: ; Log: ");
+                return $"Configuration id: {Id}; Log: {LastLog}";
             }
         }
     }
