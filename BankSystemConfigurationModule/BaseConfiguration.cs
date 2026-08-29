@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BankSystemConfigurationModule
 {
-    public abstract class BaseConfiguration
+    public class BaseConfiguration
     {
         public BaseConfiguration(int id)
         {
@@ -23,7 +22,7 @@ namespace BankSystemConfigurationModule
         /// <returns></returns>
         public string GetConfigurationInfo()
         {
-            return "";
+            return "No configuration info";
         }
 
         /// <summary>

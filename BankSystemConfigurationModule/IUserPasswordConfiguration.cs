@@ -11,5 +11,6 @@ namespace BankSystemConfigurationModule
     /// </summary>
     public interface IUserPasswordConfiguration
     {
+
     }
 }
